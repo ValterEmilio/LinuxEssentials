@@ -4,3 +4,92 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body{
+    background-color: orange;
+    margin: auto;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    overflow: hidden;
+}
+header{
+    padding: 20px;
+    margin-bottom: 2%;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    display: block;
+    width: 100%;
+}
+header > h1{
+    place-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main{
+    flex: 1;            /* O main cresce e ocupa todo o espaço entre o header e o footer */
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+
+}
+.aula1{
+    padding: 25px;
+    background-color: white;
+    display: block;
+    width: 650px;
+    height: 450px;
+    margin: 25px;
+    align-items: center;
+    place-items: center;
+    border-radius: 10px;
+
+}
+.aula2{
+    padding: 25px;
+    background-color: white;
+    display: block;
+    width: 650px;
+    height: 450px;
+    margin: 25px;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+.aula3{
+    padding: 25px;
+    background-color: white;
+    display: block;
+    width: 650px;
+    height: 450px;
+    margin: 25px;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+iframe{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+}
