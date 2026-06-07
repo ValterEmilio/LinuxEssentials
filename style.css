@@ -80,12 +80,30 @@ main{
     border-radius: 10px;
 
 }
+.aula{
+    padding: 25px;
+    background-color: white;
+    display: block;
+    width: 650px;
+    height: 450px;
+    margin: 25px;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
 
 iframe{
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
-
+div > p{
+    margin-top: 10px;
+    font-weight: 600;
+    
+}
 footer{
     background-color: white;
     padding: 15px;
