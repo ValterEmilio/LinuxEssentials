@@ -42,67 +42,120 @@ main{
     flex-flow: row wrap;
 
 }
-.aula1{
-    padding: 25px;
-    background-color: white;
-    display: block;
-    width: 650px;
-    height: 450px;
-    margin: 25px;
-    align-items: center;
-    place-items: center;
-    border-radius: 10px;
 
-}
-.aula2{
-    padding: 25px;
-    background-color: white;
-    display: block;
-    width: 650px;
-    height: 450px;
-    margin: 25px;
-    align-items: center;
-    place-items: center;
-    justify-content: center;
-    border-radius: 10px;
-
-}
-.aula3{
-    padding: 25px;
-    background-color: white;
-    display: block;
-    width: 650px;
-    height: 450px;
-    margin: 25px;
-    align-items: center;
-    place-items: center;
-    justify-content: center;
-    border-radius: 10px;
-
-}
 .aula{
-    padding: 25px;
-    background-color: white;
+    background-color: orange;
     display: block;
-    width: 650px;
-    height: 450px;
+    width: 560px;
+    height: 315px;
     margin: 25px;
     align-items: center;
     place-items: center;
     justify-content: center;
-    border-radius: 10px;
+    position: relative;
+    padding: 0;
+}
 
+div{    
+    position: relative;
+}
+.btn-info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10; /* Mantém o botão acima da tela branca e do vídeo */
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 0px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.btn-info:hover {
+    background-color: #014961;
+}
+
+.overlay-conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); 
+    z-index: 5; 
+
+    /* Configurações para o efeito suave */
+    display: flex; /* Mantemos como flex para não quebrar o layout interno */
+    opacity: 0; /* Começa totalmente invisível */
+    visibility: hidden; /* Impede que a tela seja clicada enquanto estiver invisível */
+    transition: opacity 1s ease, visibility 1s ease; /* Define o tempo da animação (0.4 segundos) */
+
+    flex-direction: column;
+    padding: 50px 20px 20px 20px; 
+    box-sizing: border-box;
+    overflow-y: auto; 
+    border-radius: 5px;
+}
+
+.overlay-conteudo.ativo {
+    display: flex;
+}
+
+.overlay-conteudo h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.overlay-conteudo ul {
+    margin-left: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+.btn-info:hover + .overlay-conteudo,
+.overlay-conteudo:hover {
+    opacity: 1; /* Fica totalmente visível */
+    visibility: visible; /* Volta a interagir com o mouse */
 }
 
 iframe{
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    transition-property:  box-shadow;
+    transition-duration: 1s;
+    transition-timing-function:ease-out;
+    
 }
+
+
+ iframe:hover{
+    
+    box-shadow: 0px 0px 50px rgb(44, 34, 16);
+}
+
 div > p{
     margin-top: 10px;
     font-weight: 600;
+
+}
+div > a {
+        position: absolute;
+    bottom: 30px; /* distância da parte inferior */
+    right: 50px;   /* distância da esquerda */
     
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00bfff;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 5px; /* diminua para ficar mais quadrado */
 }
 footer{
     background-color: white;
